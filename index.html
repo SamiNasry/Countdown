@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Countdown Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mini Countdown Maker</h1>
+        <form id="countdown-form">
+            <label for="event-name">Event Name: </label>
+            <input type="text" id="event-name" placeholder="e.g., Project Due" required>
+            <label for="event-date">End Date/Time:</label>
+            <input type="datetime-local" id="event-date" required>
+            <button type="submit">Create Countdown</button>
+        </form>
+        <div id="countdown-display" style="display: none;">
+            <h2 id="event-title"></h2>
+            <div id="timer"></div>
+            <textarea id="embed-code" readonly></textarea>
+            <button onclick="copyEmbedCode()">Copy Embed Code</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
